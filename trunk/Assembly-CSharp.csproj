@@ -51,8 +51,21 @@
      <Compile Include="Assets\Scripts\Follow.cs" />
      <Compile Include="Assets\Scripts\WheelController.cs" />
      <Compile Include="Assets\Scripts\WheelVisual.cs" />
+     <Compile Include="Assets\TreasureChest.cs" />
+     <None Include="Assets\DOTween\DOTween46.xml" />
+     <None Include="Assets\DOTween\DOTween43.xml" />
+     <None Include="Assets\DOTween\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween43">
+ <HintPath>/Users/brian/repos/dungeonbus/trunk/Assets/DOTween/DOTween43.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>/Users/brian/repos/dungeonbus/trunk/Assets/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween46">
+ <HintPath>/Users/brian/repos/dungeonbus/trunk/Assets/DOTween/DOTween46.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
