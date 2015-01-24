@@ -144,6 +144,19 @@ ModelImporter:
     100276: transform7
     100278: transform8
     100280: transform9
+    100282: accordianCoupling
+    100284: busFront
+    100286: busFrontFloor
+    100288: busRear
+    100290: busRearFloor
+    100292: pCube90
+    100294: polySurface9
+    100296: wheel_01_l
+    100298: wheel_01_r
+    100300: wheel_02_l
+    100302: wheel_02_r
+    100304: wheel_03_l
+    100306: wheel_03_r
     400000: Back
     400002: Bus
     400004: //RootNode
@@ -285,6 +298,19 @@ ModelImporter:
     400276: transform7
     400278: transform8
     400280: transform9
+    400282: accordianCoupling
+    400284: busFront
+    400286: busFrontFloor
+    400288: busRear
+    400290: busRearFloor
+    400292: pCube90
+    400294: polySurface9
+    400296: wheel_01_l
+    400298: wheel_01_r
+    400300: wheel_02_l
+    400302: wheel_02_r
+    400304: wheel_03_l
+    400306: wheel_03_r
     2300000: busFloor
     2300002: frontShell
     2300004: l_Wheel_01
@@ -399,6 +425,19 @@ ModelImporter:
     2300222: r_Wheel_02
     2300224: r_Wheel_03
     2300226: rearShell
+    2300228: accordianCoupling
+    2300230: busFront
+    2300232: busFrontFloor
+    2300234: busRear
+    2300236: busRearFloor
+    2300238: pCube90
+    2300240: polySurface9
+    2300242: wheel_01_l
+    2300244: wheel_01_r
+    2300246: wheel_02_l
+    2300248: wheel_02_r
+    2300250: wheel_03_l
+    2300252: wheel_03_r
     3300000: busFloor
     3300002: frontShell
     3300004: l_Wheel_01
@@ -513,6 +552,19 @@ ModelImporter:
     3300222: r_Wheel_02
     3300224: r_Wheel_03
     3300226: rearShell
+    3300228: accordianCoupling
+    3300230: busFront
+    3300232: busFrontFloor
+    3300234: busRear
+    3300236: busRearFloor
+    3300238: pCube90
+    3300240: polySurface9
+    3300242: wheel_01_l
+    3300244: wheel_01_r
+    3300246: wheel_02_l
+    3300248: wheel_02_r
+    3300250: wheel_03_l
+    3300252: wheel_03_r
     4300000: pCube59
     4300002: pCube60
     4300004: pCube61
@@ -627,6 +679,19 @@ ModelImporter:
     4300222: pSphere11
     4300224: pSphere12
     4300226: pSphere13
+    4300228: pCube90
+    4300230: wheel_03_l
+    4300232: wheel_01_r
+    4300234: wheel_02_r
+    4300236: wheel_01_l
+    4300238: wheel_02_l
+    4300240: accordianCoupling
+    4300242: busRear
+    4300244: busFront
+    4300246: polySurface9
+    4300248: busFrontFloor
+    4300250: busRearFloor
+    4300252: wheel_03_r
     9500000: //RootNode
   materials:
     importMaterials: 1
