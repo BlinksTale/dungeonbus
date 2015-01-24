@@ -6,6 +6,7 @@ public class Follow : MonoBehaviour {
 	public Transform focus;
 	public bool x,y,z;
 	public bool exactly;
+    public Vector3 rotationOffset;
 
 	// Use this for initialization
 	void Start () {
@@ -41,5 +42,7 @@ public class Follow : MonoBehaviour {
 				this.transform.position = this.transform.position * 0.8f + 0.2f * newPos;
 			}
 		}
+
+        this.transform.rotation = Quaternion.Euler(rotationOffset);
 	}
 }
