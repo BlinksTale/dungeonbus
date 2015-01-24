@@ -47,9 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BusController.cs" />
+     <Compile Include="Assets\Scripts\CenterOfMass.cs" />
      <Compile Include="Assets\Scripts\Follow.cs" />
      <Compile Include="Assets\Scripts\WheelController.cs" />
-     <Compile Include="Assets\WheelVisual.cs" />
+     <Compile Include="Assets\Scripts\WheelVisual.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
