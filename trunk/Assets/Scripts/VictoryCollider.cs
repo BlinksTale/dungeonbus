@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class VictoryCollider : MonoBehaviour {
 
-	public GameObject winText;
+	public Text winText, gnomeText;
+	public string subtext1 = "With ";
+	public string subtext2 = " gnomes saved!";
 	private float timeToNextLevel = 3f;
+	private int totalGnomes = 0;
+	private bool winTriggered = false;
 
 	// Use this for initialization
 	void Start () {
@@ -13,11 +18,20 @@ public class VictoryCollider : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerEnter (Collider other) {
-		if (other.tag == "Player")
+		if (other.tag == "Player" && !winTriggered)
 		{
-			winText.SetActive(true);
+			winText.gameObject.SetActive(true);
+			gnomeText.gameObject.SetActive(true);
+			gnomeText.text = subtext1 + totalGnomes + subtext2;
 			Invoke ("NextLevel", timeToNextLevel);
-			collider.enabled = false;
+			winTriggered = true;
+		}
+
+		if (other.tag == "Gnome")
+		{
+			totalGnomes++;
+			gnomeText.text = subtext1 + totalGnomes + subtext2;
+			other.collider.enabled = false;
 		}
 	}
 
