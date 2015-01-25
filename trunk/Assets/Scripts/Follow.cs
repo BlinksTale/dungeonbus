@@ -7,6 +7,7 @@ public class Follow : MonoBehaviour {
 	public bool x,y,z;
 	public bool exactly;
     public Vector3 rotationOffset;
+    public Vector3 posOffset;
 
 	// Use this for initialization
 	void Start () {
@@ -18,15 +19,15 @@ public class Follow : MonoBehaviour {
 		Vector3 newPos = this.transform.position;
 		if (x)
 		{
-			newPos.x = focus.position.x;
+			newPos.x = focus.position.x + posOffset.x;
 		}
 		if (y)
 		{
-			newPos.y = focus.position.y;
+            newPos.y = focus.position.y + posOffset.y;
 		}
 		if (z)
 		{
-			newPos.z = focus.position.z;
+            newPos.z = focus.position.z + posOffset.z;
 		}
 
 		if (exactly)
