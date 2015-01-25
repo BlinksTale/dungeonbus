@@ -120,12 +120,12 @@ public class BusController : MonoBehaviour {
 
         upgrades[selectedUpgrade].SetActive(true);
         activeUpgrade = selectedUpgrade;
-//        StartCoroutine(DisableUpgrade());
+        StartCoroutine(DisableUpgrade());
     }
 
     IEnumerator DisableUpgrade()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
         DisableUpgrades();
     }
 
