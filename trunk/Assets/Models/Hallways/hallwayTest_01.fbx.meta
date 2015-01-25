@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 43f793ee9b4cf1d4d89f7526fb4d8048
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: corridor_large_downRight_02
+    100002: corridor_large_downRight_03
+    100004: corridor_large_straight_01
+    100006: corridor_large_toMedium_01
+    100008: corridor_large_toSmall_01
+    100010: corridor_medium_downLeft_01
+    100012: corridor_medium_downRight_01
+    100014: corridor_medium_straight_01
+    100016: corridor_medium_toLargel_01
+    100018: corridor_medium_toSmall_01
+    100020: corridor_medium_vertWiggle_01
+    100022: corridor_small_downLeft_01
+    100024: corridor_small_downRight_01
+    100026: corridor_small_straight_01
+    100028: corridor_small_toLarge_01
+    100030: corridor_small_toMedium_01
+    100032: //RootNode
+    100034: wallStop_large_toLarge_01
+    400000: corridor_large_downRight_02
+    400002: corridor_large_downRight_03
+    400004: corridor_large_straight_01
+    400006: corridor_large_toMedium_01
+    400008: corridor_large_toSmall_01
+    400010: corridor_medium_downLeft_01
+    400012: corridor_medium_downRight_01
+    400014: corridor_medium_straight_01
+    400016: corridor_medium_toLargel_01
+    400018: corridor_medium_toSmall_01
+    400020: corridor_medium_vertWiggle_01
+    400022: corridor_small_downLeft_01
+    400024: corridor_small_downRight_01
+    400026: corridor_small_straight_01
+    400028: corridor_small_toLarge_01
+    400030: corridor_small_toMedium_01
+    400032: //RootNode
+    400034: wallStop_large_toLarge_01
+    2300000: corridor_large_downRight_02
+    2300002: corridor_large_downRight_03
+    2300004: corridor_large_straight_01
+    2300006: corridor_large_toMedium_01
+    2300008: corridor_large_toSmall_01
+    2300010: corridor_medium_downLeft_01
+    2300012: corridor_medium_downRight_01
+    2300014: corridor_medium_straight_01
+    2300016: corridor_medium_toLargel_01
+    2300018: corridor_medium_toSmall_01
+    2300020: corridor_medium_vertWiggle_01
+    2300022: corridor_small_downLeft_01
+    2300024: corridor_small_downRight_01
+    2300026: corridor_small_straight_01
+    2300028: corridor_small_toLarge_01
+    2300030: corridor_small_toMedium_01
+    2300032: wallStop_large_toLarge_01
+    3300000: corridor_large_downRight_02
+    3300002: corridor_large_downRight_03
+    3300004: corridor_large_straight_01
+    3300006: corridor_large_toMedium_01
+    3300008: corridor_large_toSmall_01
+    3300010: corridor_medium_downLeft_01
+    3300012: corridor_medium_downRight_01
+    3300014: corridor_medium_straight_01
+    3300016: corridor_medium_toLargel_01
+    3300018: corridor_medium_toSmall_01
+    3300020: corridor_medium_vertWiggle_01
+    3300022: corridor_small_downLeft_01
+    3300024: corridor_small_downRight_01
+    3300026: corridor_small_straight_01
+    3300028: corridor_small_toLarge_01
+    3300030: corridor_small_toMedium_01
+    3300032: wallStop_large_toLarge_01
+    4300000: corridor_small_straight_01
+    4300002: corridor_medium_straight_01
+    4300004: corridor_large_straight_01
+    4300006: corridor_medium_toSmall_01
+    4300008: corridor_medium_toLargel_01
+    4300010: corridor_large_toMedium_01
+    4300012: corridor_large_toSmall_01
+    4300014: corridor_small_toMedium_01
+    4300016: corridor_small_toLarge_01
+    4300018: wallStop_large_toLarge_01
+    4300020: corridor_medium_downRight_01
+    4300022: corridor_medium_downLeft_01
+    4300024: corridor_small_downRight_01
+    4300026: corridor_small_downLeft_01
+    4300028: corridor_large_downRight_02
+    4300030: corridor_large_downRight_03
+    4300032: corridor_medium_vertWiggle_01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

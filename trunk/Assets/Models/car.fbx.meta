@@ -1,20 +1,33 @@
 fileFormatVersion: 2
-guid: e7ae8266925ffc64ca186a24a2e51524
+guid: cd1ecbd194b6b1349a9ee002265c4377
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: cloak
-    100002: //RootNode
-    100004: hatRKD:hat
-    400000: cloak
-    400002: //RootNode
-    400004: hatRKD:hat
-    2300000: cloak
-    2300002: hatRKD:hat
-    3300000: cloak
-    3300002: hatRKD:hat
-    4300000: cloak
-    4300002: hatRKD:hat
+    100000: //RootNode
+    100002: carRKD:pCube17
+    100004: pCylinder4
+    100006: pCylinder5
+    100008: pCylinder8
+    100010: pCylinder9
+    100012: transform8
+    100014: transform9
+    400000: //RootNode
+    400002: carRKD:pCube17
+    400004: pCylinder4
+    400006: pCylinder5
+    400008: pCylinder8
+    400010: pCylinder9
+    400012: transform8
+    400014: transform9
+    2300000: carRKD:pCube17
+    2300002: pCylinder8
+    2300004: pCylinder9
+    3300000: carRKD:pCube17
+    3300002: pCylinder8
+    3300004: pCylinder9
+    4300000: pCylinder8
+    4300002: pCylinder9
+    4300004: carRKD:pCube17
     9500000: //RootNode
   materials:
     importMaterials: 1
