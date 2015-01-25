@@ -61,6 +61,7 @@ ModelImporter:
     7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
+    13700000: goblinRKD:pCube3
   materials:
     importMaterials: 1
     materialName: 0
