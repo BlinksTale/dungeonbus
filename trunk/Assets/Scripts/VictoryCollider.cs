@@ -4,9 +4,8 @@ using UnityEngine.UI;
 
 public class VictoryCollider : MonoBehaviour {
 
-	public Text winText, gnomeText;
-	public string subtext1 = "With ";
-	public string subtext2 = " gnomes saved!";
+	public GameObject winObj;
+	public Text gnomeText;
 	private float timeToNextLevel = 3f;
 	private int totalGnomes = 0;
 	private bool winTriggered = false;
@@ -20,9 +19,9 @@ public class VictoryCollider : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player" && !winTriggered)
 		{
-			winText.gameObject.SetActive(true);
+			winObj.SetActive(true);
 			gnomeText.gameObject.SetActive(true);
-			gnomeText.text = subtext1 + totalGnomes + subtext2;
+			gnomeText.text = "" + totalGnomes;
 			Invoke ("NextLevel", timeToNextLevel);
 			winTriggered = true;
 		}
@@ -30,7 +29,7 @@ public class VictoryCollider : MonoBehaviour {
 		if (other.tag == "Gnome")
 		{
 			totalGnomes++;
-			gnomeText.text = subtext1 + totalGnomes + subtext2;
+			gnomeText.text = "" + totalGnomes;
 			other.collider.enabled = false;
 		}
 	}
