@@ -17,8 +17,15 @@ public class goblinAI : MonoBehaviour {
 		Vector3 targetPosition = bus.transform.position;
 		if (this.transform.position != targetPosition) 
 		{
-			transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed*Time.deltaTime);
+			transform.position = Vector3.Lerp(this.transform.position, new Vector3(targetPosition.x, this.transform.position.y, targetPosition.z), moveSpeed*Time.deltaTime);
 			transform.LookAt(targetPosition);
+		}
+	}
+	void OnCollisionEnter(Collision col)
+	{
+		if(col.gameObject.name == "sword")
+		{
+			Destroy(this);
 		}
 	}
 }
