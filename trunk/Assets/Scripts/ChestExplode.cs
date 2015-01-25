@@ -5,6 +5,7 @@ public class ChestExplode : MonoBehaviour
 {
     public GameObject[] meshGeo;
     private Rigidbody[] chestPieces;
+    private BusController player;
 
     void Start()
     {
@@ -15,7 +16,8 @@ public class ChestExplode : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-
+            player = other.gameObject.transform.parent.parent.parent.GetComponent<BusController>();
+            player.EnableUpgrade();
             StartCoroutine(DisableColliders());
 
             foreach (Rigidbody rb in chestPieces)

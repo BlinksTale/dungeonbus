@@ -1,26 +1,51 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class BusController : MonoBehaviour {
 
+    public GameObject[] upgrades;
+    private int selectedUpgrade;
+    private int activeUpgrade;
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+    {
+        DisableUpgrades();
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
 
-		if (Input.GetKey(KeyCode.LeftArrow))
-		{
-			rigidbody.AddTorque(new Vector3(0f, -2000f, 100f));
-		}
+    public void EnableUpgrade()
+    {
+        StopCoroutine(DisableUpgrade());
 
-		if (Input.GetKey(KeyCode.RightArrow))
-		{
-			rigidbody.AddTorque(new Vector3(0f, 2000f, -100f));
-		}
+        
 
-	}
+        while(selectedUpgrade == activeUpgrade)
+        {
+            System.Random rand = new System.Random(Guid.NewGuid().GetHashCode());
+            selectedUpgrade = rand.Next(0, upgrades.Length);
+            //selectedUpgrade = Random.Range(0, upgrades.Length - 1);
+            Debug.Log(selectedUpgrade);
+        }
+
+        
+
+        upgrades[selectedUpgrade].SetActive(true);
+        activeUpgrade = selectedUpgrade;
+        StartCoroutine(DisableUpgrade());
+    }
+
+    IEnumerator DisableUpgrade()
+    {
+        yield return new WaitForSeconds(10f);
+        DisableUpgrades();
+    }
+
+    void DisableUpgrades()
+    {
+        foreach (GameObject obj in upgrades)
+        {
+            obj.SetActive(false);
+        }
+    }
 	
 }
