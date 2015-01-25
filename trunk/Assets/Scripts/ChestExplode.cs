@@ -38,6 +38,8 @@ public class ChestExplode : MonoBehaviour
     {
         yield return new WaitForSeconds(.1f);
 
+        this.collider.enabled = false;
+
         foreach (Rigidbody rb in chestPieces)
         {
             rb.collider.enabled = false;
