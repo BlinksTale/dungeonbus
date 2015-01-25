@@ -8,7 +8,7 @@ public class LoseCollider : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -16,6 +16,7 @@ public class LoseCollider : MonoBehaviour {
 		if (other.tag == "Player")
 		{
 			text.SetActive(true);
+			audio.Play();
 			Invoke ("Reset", timeToNextLevel);
 			collider.enabled = false;
 		}

@@ -22,6 +22,7 @@ public class TreasureChest : MonoBehaviour
             //camFollow.animOverride = true;
 
             anim.SetTrigger("ChestOpen");
+			audio.Play();
             
             //DOTween.To(() => camFollow.rotationOffset, x => camFollow.rotationOffset = x, new Vector3(0, -90, 0), 1);
         }
