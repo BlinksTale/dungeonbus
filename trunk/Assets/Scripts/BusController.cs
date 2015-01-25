@@ -29,8 +29,9 @@ public class BusController : MonoBehaviour {
         	GenerateGnomes();
 		}
 		
-		ToggleSparks(zeroGravity); // so sparks are always on in zero g
 		front = this.GetComponentInChildren<GrenadeLauncher>().gameObject;
+
+		ToggleSparks(zeroGravity); // so sparks are always on in zero g
 	}
 
 	void FixedUpdate()

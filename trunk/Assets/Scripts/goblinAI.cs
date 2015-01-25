@@ -23,7 +23,7 @@ public class goblinAI : MonoBehaviour {
 
         anim = this.GetComponent<Animator>();
 
-        ToggleRagDoll(false);
+//        ToggleRagDoll(false);
 	}
 
     void ToggleRagDoll(bool state)
@@ -52,16 +52,16 @@ public class goblinAI : MonoBehaviour {
             }
         }
 	}
-	void OnTriggerEnter(Collider col)
+	void OnCollisionEnter(Collision col)
 	{
 		if(col.gameObject.tag == "sword" || col.gameObject.tag == "shield")
 		{
-			//Destroy(this.gameObject);
-            Debug.Log("Hit Goblin");
-            anim.enabled = false;
-            ragDollTime = true;
-            this.rigidbody.AddExplosionForce(1000f, this.transform.position, 10f);
-            ToggleRagDoll(true);
+			Destroy(this.gameObject);
+//            Debug.Log("Hit Goblin");
+//            anim.enabled = false;
+//            ragDollTime = true;
+//            this.rigidbody.AddExplosionForce(1000f, this.transform.position, 10f);
+//            ToggleRagDoll(true);
 		}
 	}
 }
