@@ -7,7 +7,7 @@ public class Grenade : MonoBehaviour {
 	public static ExplosionNotification Explosion;
 
 	private float explosionTime = 1f;
-	private float force = 10f * 1000f;
+	private float force = 20f * 1000f;
 	private float radius = 100f;
 
 	// Use this for initialization

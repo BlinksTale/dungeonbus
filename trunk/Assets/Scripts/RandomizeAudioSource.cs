@@ -4,6 +4,7 @@ using System.Collections;
 public class RandomizeAudioSource : MonoBehaviour {
 
 	public int totalClips = 4;
+	public bool playOnRandomize = false;
 
 	// Use this for initialization
 	void Start() {
@@ -19,7 +20,12 @@ public class RandomizeAudioSource : MonoBehaviour {
 			}
 		}
 		string newClipName = clipName.Substring(0,clipName.Length - 1) + Random.Range(1, 1 + totalClips);
-		audio.clip = Instantiate(Resources.Load(clipName)) as AudioClip;
+		audio.clip = Instantiate(Resources.Load(newClipName)) as AudioClip;
+
+		if (playOnRandomize)
+		{
+			audio.Play();
+		}
 	}
 	
 }
