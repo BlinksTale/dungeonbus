@@ -21,6 +21,7 @@ public class physicsSpawner : MonoBehaviour {
 			{
 				GameObject.Instantiate(physicsObject, spawner.transform.position, spawner.transform.rotation);
 			}
+			Destroy(this.gameObject);
 		}
 	}
 }
