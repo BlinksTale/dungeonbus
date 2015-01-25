@@ -19,8 +19,9 @@ public class physicsSpawner : MonoBehaviour {
 		{
 			foreach(GameObject spawner in physicsSpawners)
 			{
-
+				GameObject.Instantiate(physicsObject, spawner.transform.position, spawner.transform.rotation);
 			}
+			Destroy(this.gameObject);
 		}
 	}
 }
