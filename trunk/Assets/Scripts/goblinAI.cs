@@ -5,6 +5,8 @@ public class goblinAI : MonoBehaviour {
 	private GameObject bus;
 	public float moveSpeed = 500f;
 
+	private float range = 400f;
+
     private bool ragDollTime;
     private Rigidbody[] rigidBodies;
     private Vector3 targetPosition;
@@ -21,7 +23,7 @@ public class goblinAI : MonoBehaviour {
 
         anim = this.GetComponent<Animator>();
 
-        ToggleRagDoll(false);
+//        ToggleRagDoll(false);
 	}
 
     void ToggleRagDoll(bool state)
@@ -38,23 +40,28 @@ public class goblinAI : MonoBehaviour {
         {
 
             targetPosition = bus.transform.position;
-            if (this.transform.position != targetPosition)
+			if ((this.transform.position - targetPosition).magnitude < range*2f)
+			{
+				transform.LookAt(targetPosition);
+			}
+
+			if (this.transform.position != targetPosition && (this.transform.position - targetPosition).magnitude < range)
             {
                 transform.position = Vector3.Lerp(this.transform.position, new Vector3(targetPosition.x, this.transform.position.y, targetPosition.z), moveSpeed * Time.deltaTime);
                 transform.LookAt(targetPosition);
             }
         }
 	}
-	void OnTriggerEnter(Collider col)
+	void OnCollisionEnter(Collision col)
 	{
 		if(col.gameObject.tag == "sword" || col.gameObject.tag == "shield")
 		{
-			//Destroy(this.gameObject);
-            Debug.Log("Hit Goblin");
-            anim.enabled = false;
-            ragDollTime = true;
-            this.rigidbody.AddExplosionForce(1000f, this.transform.position, 10f);
-            ToggleRagDoll(true);
+			Destroy(this.gameObject);
+//            Debug.Log("Hit Goblin");
+//            anim.enabled = false;
+//            ragDollTime = true;
+//            this.rigidbody.AddExplosionForce(1000f, this.transform.position, 10f);
+//            ToggleRagDoll(true);
 		}
 	}
 }

@@ -5,14 +5,18 @@ using System;
 public class BusController : MonoBehaviour {
 
     public GameObject[] upgrades;
+	public bool generatingGnomes = true;
     public GameObject gnome;
     public GameObject frontGnomeCage;
     public GameObject backGnomeCage;
     public Texture[] gnomeColors;
     public ParticleSystem[] sparks;
     public int gnomeCount = 15;
-    private int selectedUpgrade;
+	public bool zeroGravity = false;
+	private int selectedUpgrade;
     private int activeUpgrade;
+	private GameObject front;
+
     [SerializeField]
     private Rigidbody rb;
 
@@ -20,28 +24,51 @@ public class BusController : MonoBehaviour {
 	void Start ()
     {
         DisableUpgrades();
-        GenerateGnomes();
-        ToggleSparks(false);
+
+		if (generatingGnomes) {
+        	GenerateGnomes();
+		}
+		
+		front = this.GetComponentInChildren<GrenadeLauncher>().gameObject;
+
+		ToggleSparks(zeroGravity); // so sparks are always on in zero g
+	}
+
+	void FixedUpdate()
+	{
+		if (zeroGravity) 
+		{
+			if (Input.GetKey(KeyCode.LeftArrow)) {
+				front.rigidbody.AddRelativeTorque(new Vector3(-1000f, 0f, 0f));
+			}
+			if (Input.GetKey(KeyCode.RightArrow)) {
+				front.rigidbody.AddRelativeTorque(new Vector3(1000f, 0f, 0f));
+			}
+		} else {
+			if (rb.velocity.magnitude > 20f)
+			{
+				ToggleSparks(true);
+			}
+			else
+			{
+				ToggleSparks(false);
+			}
+		}
+
 	}
 
     void ToggleSparks(bool state)
     {
         for (int i = 0; i < sparks.Length; i++)
         {
-            //sparks[i].SetActive(state);
-        }
-    }
-
-    void FixedUpdate()
-    {
-  
-        if (rb.velocity.magnitude > 20f)
-        {
-            ToggleSparks(true);
-        }
-        else
-        {
-            ToggleSparks(false);
+            if (state)
+            {
+                sparks[i].Emit(1);
+            }
+            else
+            {
+                sparks[i].Emit(0);
+            }
         }
     }
 
@@ -93,7 +120,7 @@ public class BusController : MonoBehaviour {
 
         upgrades[selectedUpgrade].SetActive(true);
         activeUpgrade = selectedUpgrade;
-        StartCoroutine(DisableUpgrade());
+//        StartCoroutine(DisableUpgrade());
     }
 
     IEnumerator DisableUpgrade()
