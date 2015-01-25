@@ -7,9 +7,9 @@ public class WheelController : MonoBehaviour {
 	public bool driving = true;
 	public bool invertDirection = false;
 
-	private float speed = 200f;
+	public float speed = 200f;
 	private WheelCollider wheel;
-	private float turningSpeed = 2f; // speed of 2f has some good chunkiness
+	public float turningSpeed = 2f; // speed of 2f has some good chunkiness
 	private float steerAngleMax = 45f;
 
 	private bool turnRight, turnLeft;
