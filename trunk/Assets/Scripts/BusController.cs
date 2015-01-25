@@ -9,16 +9,41 @@ public class BusController : MonoBehaviour {
     public GameObject frontGnomeCage;
     public GameObject backGnomeCage;
     public Texture[] gnomeColors;
+    public ParticleSystem[] sparks;
     public int gnomeCount = 15;
     private int selectedUpgrade;
     private int activeUpgrade;
+    [SerializeField]
+    private Rigidbody rb;
 
 	// Use this for initialization
 	void Start ()
     {
         DisableUpgrades();
         GenerateGnomes();
+        ToggleSparks(false);
 	}
+
+    void ToggleSparks(bool state)
+    {
+        for (int i = 0; i < sparks.Length; i++)
+        {
+            //sparks[i].SetActive(state);
+        }
+    }
+
+    void FixedUpdate()
+    {
+  
+        if (rb.velocity.magnitude > 20f)
+        {
+            ToggleSparks(true);
+        }
+        else
+        {
+            ToggleSparks(false);
+        }
+    }
 
     void GenerateGnomes()
     {
