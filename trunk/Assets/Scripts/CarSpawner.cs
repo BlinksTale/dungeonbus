@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CarSpawner : MonoBehaviour
 {
     public GameObject car;
     public int frameSkip = 5;
     public float CarSpeed = 5;
+    public Texture[] carColors;
 
     private CarEnemy carSpawn;
 
@@ -28,6 +30,12 @@ public class CarSpawner : MonoBehaviour
     {
         GameObject go;
         go = (GameObject)GameObject.Instantiate(car, this.transform.position, this.transform.rotation);
+
+        System.Random rand = new System.Random(Guid.NewGuid().GetHashCode());
+        Renderer carRenderer;
+        carRenderer = go.GetComponentInChildren<Renderer>();
+        carRenderer.renderer.material.mainTexture = carColors[rand.Next(0, carColors.Length)];
+
         carSpawn = go.GetComponent<CarEnemy>();
         carSpawn.speed = CarSpeed;
     }
