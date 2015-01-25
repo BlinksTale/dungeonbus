@@ -1,20 +1,55 @@
 fileFormatVersion: 2
-guid: e7ae8266925ffc64ca186a24a2e51524
+guid: 69f76a5d6c822af4eb32cb4c10e378b2
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: cloak
-    100002: //RootNode
-    100004: hatRKD:hat
-    400000: cloak
-    400002: //RootNode
-    400004: hatRKD:hat
-    2300000: cloak
-    2300002: hatRKD:hat
-    3300000: cloak
-    3300002: hatRKD:hat
-    4300000: cloak
-    4300002: hatRKD:hat
+    100000: //RootNode
+    100002: busstopRKD:pCube6
+    100004: pCube10
+    100006: pCube11
+    100008: pCube12
+    100010: pCube4
+    100012: pCube5
+    100014: pCube7
+    100016: pCube8
+    100018: pCube9
+    400000: //RootNode
+    400002: busstopRKD:pCube6
+    400004: pCube10
+    400006: pCube11
+    400008: pCube12
+    400010: pCube4
+    400012: pCube5
+    400014: pCube7
+    400016: pCube8
+    400018: pCube9
+    2300000: busstopRKD:pCube6
+    2300002: pCube10
+    2300004: pCube11
+    2300006: pCube12
+    2300008: pCube4
+    2300010: pCube5
+    2300012: pCube7
+    2300014: pCube8
+    2300016: pCube9
+    3300000: busstopRKD:pCube6
+    3300002: pCube10
+    3300004: pCube11
+    3300006: pCube12
+    3300008: pCube4
+    3300010: pCube5
+    3300012: pCube7
+    3300014: pCube8
+    3300016: pCube9
+    4300000: pCube4
+    4300002: pCube5
+    4300004: pCube7
+    4300006: pCube8
+    4300008: pCube9
+    4300010: pCube10
+    4300012: pCube11
+    4300014: pCube12
+    4300016: busstopRKD:pCube6
     9500000: //RootNode
   materials:
     importMaterials: 1

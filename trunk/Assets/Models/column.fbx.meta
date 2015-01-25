@@ -1,20 +1,13 @@
 fileFormatVersion: 2
-guid: e7ae8266925ffc64ca186a24a2e51524
+guid: 447096a835a34f849a435574f2ab1254
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: cloak
-    100002: //RootNode
-    100004: hatRKD:hat
-    400000: cloak
-    400002: //RootNode
-    400004: hatRKD:hat
-    2300000: cloak
-    2300002: hatRKD:hat
-    3300000: cloak
-    3300002: hatRKD:hat
-    4300000: cloak
-    4300002: hatRKD:hat
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: columnRKD:column
     9500000: //RootNode
   materials:
     importMaterials: 1
