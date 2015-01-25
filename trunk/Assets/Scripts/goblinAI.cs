@@ -23,9 +23,9 @@ public class goblinAI : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col)
 	{
-		if(col.gameObject.name == "sword")
+		if(col.gameObject.tag == "sword" || col.gameObject.tag == "shield")
 		{
-			Destroy(this);
+			Destroy(this.gameObject);
 		}
 	}
 }
