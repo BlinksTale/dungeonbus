@@ -11,6 +11,7 @@ ModelImporter:
     100010: pCylinder9
     100012: transform8
     100014: transform9
+    100016: locator1
     400000: //RootNode
     400002: carRKD:pCube17
     400004: pCylinder4
@@ -19,6 +20,7 @@ ModelImporter:
     400010: pCylinder9
     400012: transform8
     400014: transform9
+    400016: locator1
     2300000: carRKD:pCube17
     2300002: pCylinder8
     2300004: pCylinder9
