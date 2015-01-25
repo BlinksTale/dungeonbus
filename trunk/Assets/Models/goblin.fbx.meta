@@ -58,7 +58,7 @@ ModelImporter:
     2300000: goblinRKD:pCube3
     3300000: goblinRKD:pCube3
     4300000: goblinRKD:pCube3
-    7400000: Take 001
+    7400000: Charge
     9500000: //RootNode
     11100000: //RootNode
     13700000: goblinRKD:pCube3
@@ -79,7 +79,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Charge
       takeName: Take 001
       firstFrame: 1
       lastFrame: 19
@@ -88,7 +88,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
