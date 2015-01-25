@@ -30,14 +30,12 @@ public class goblinAI : MonoBehaviour {
 
         ToggleRagDoll(false);
 
-        Debug.Log("layermask "+layerMask);
 	}
 
     void ToggleRagDoll(bool state)
     {
         foreach (Rigidbody rb in rigidBodies)
         {
-            Debug.Log("rigidbo layermask " + rb.gameObject.layer);
 
             if (rb.gameObject.layer == layerMask)
             {
@@ -79,7 +77,8 @@ public class goblinAI : MonoBehaviour {
 	}
     void OnCollisionEnter(Collision col)
 	{
-		if(col.gameObject.tag == "sword" || col.gameObject.tag == "shield")
+
+        if (col.gameObject.tag == "sword" || col.gameObject.tag == "shield")
 		{
 		//Destroy(this.gameObject);
             Debug.Log("Hit Goblin");
