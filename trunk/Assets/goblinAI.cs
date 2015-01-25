@@ -2,14 +2,18 @@
 using System.Collections;
 
 public class goblinAI : MonoBehaviour {
+	public GameObject bus;
 
-	// Use this for initialization
-	void Start () {
-	
+	void Start () 
+	{
+		if (bus == null) 
+		{
+			bus = GameObject.FindWithTag("Player");
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Update () 
+	{
+		this.transform.position += bus.transform.position/10;
 	}
 }
