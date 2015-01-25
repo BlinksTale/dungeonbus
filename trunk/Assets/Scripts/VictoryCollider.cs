@@ -22,6 +22,8 @@ public class VictoryCollider : MonoBehaviour {
 	}
 
 	void NextLevel() {
-		Application.LoadLevel(Application.loadedLevel + 1);
+		if (Application.loadedLevel < Application.levelCount - 1) {
+			Application.LoadLevel(Application.loadedLevel + 1);
+		}
 	}
 }
