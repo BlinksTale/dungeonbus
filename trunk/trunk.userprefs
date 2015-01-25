@@ -1,12 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Grenade.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/rendererFlicker.cs">
     <Files>
-      <File FileName="Assets/Scripts/WheelController.cs" Line="10" Column="25" />
-      <File FileName="Assets/Scripts/Follow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/VictoryCollider.cs" Line="33" Column="1" />
-      <File FileName="Assets/DestroySelfAfter.cs" Line="18" Column="29" />
-      <File FileName="Assets/Scripts/Grenade.cs" Line="28" Column="66" />
+      <File FileName="Assets/Scripts/Grenade.cs" Line="9" Column="7" />
+      <File FileName="Assets/Scripts/rendererFlicker.cs" Line="20" Column="82" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
