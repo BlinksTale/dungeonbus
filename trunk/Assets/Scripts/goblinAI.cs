@@ -4,6 +4,7 @@ using System.Collections;
 public class goblinAI : MonoBehaviour {
 	private GameObject bus;
 	public float moveSpeed = 500f;
+	public AudioClip deathAudio;
 
 	private float range = 400f;
 
@@ -86,7 +87,12 @@ public class goblinAI : MonoBehaviour {
             ragDollTime = true;
             collider.isTrigger = true;
             ToggleRagDoll(true);
-            this.rigidbody.AddExplosionForce(1000f, this.transform.position, 10f);
+			audio.clip = deathAudio;
+			audio.loop = false;
+			RandomizeAudioSource randAudio = this.GetComponent<RandomizeAudioSource>();
+			randAudio.totalClips = 3;
+			randAudio.RandomizeAudio();
+			this.rigidbody.AddExplosionForce(1000f, this.transform.position, 10f);
            
 		}
 	}

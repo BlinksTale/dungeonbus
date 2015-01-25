@@ -4,7 +4,7 @@ using System.Collections;
 public class RandomizeAudioSource : MonoBehaviour {
 
 	public int totalClips = 4;
-	public bool playOnRandomize = false;
+	public bool playOnRandomize = false; // because Play On Awake doesn't work well when you're also loading new clips at Start
 
 	// Use this for initialization
 	void Start() {
@@ -13,6 +13,8 @@ public class RandomizeAudioSource : MonoBehaviour {
 
 	public void RandomizeAudio () {
 		string clipName = audio.clip.name;
+
+		// Remove excess "(Clone)" text from end of name
 		if (clipName.Length >= 7) {
 			string end = clipName.Substring(clipName.Length - 7, 7);
 			if (end == "(Clone)") {
