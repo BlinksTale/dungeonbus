@@ -1,16 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BusController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/LoadLevelTimer.cs">
     <Files>
       <File FileName="Assets/Scripts/Grenade.cs" Line="9" Column="7" />
       <File FileName="Assets/Scripts/rendererFlicker.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/goblinAI.cs" Line="60" Column="1" />
+      <File FileName="Assets/Scripts/goblinAI.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ChestExplode.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BusController.cs" Line="33" Column="3" />
-      <File FileName="Assets/ShakeViolently.cs" Line="1" Column="1" />
-      <File FileName="Assets/SuddenlyReduceClippingPlane.cs" Line="6" Column="18" />
-      <File FileName="Assets/QuitButton.cs" Line="9" Column="22" />
-      <File FileName="Assets/Scripts/LoadLevelButton.cs" Line="5" Column="2" />
+      <File FileName="Assets/Scripts/BusController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LoadLevelButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/LoadLevelTimer.cs" Line="18" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -39,7 +39,7 @@ public class SuddenlyReduceClippingPlane : MonoBehaviour {
 
 			if (Time.timeSinceLevelLoad > delay + reduction + blackPause)
 			{
-				Application.LoadLevel(0);
+				Application.LoadLevel(Application.loadedLevel + 1);
 			}
 		}
 	}

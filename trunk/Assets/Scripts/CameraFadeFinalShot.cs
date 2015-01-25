@@ -10,6 +10,7 @@ public class CameraFadeFinalShot : MonoBehaviour {
 	public float visibleWait = 3f;
 	public float fadeOutTime = 3f;
 	public float fadeOutDelay = 3f;
+	public string nextLevel;
 
 	private float[] nodes;
 
@@ -39,7 +40,7 @@ public class CameraFadeFinalShot : MonoBehaviour {
 				panel.color = intended;
 			}
 		} else if (Time.timeSinceLevelLoad >= nodes[4]) {
-			Application.LoadLevel(0);
+			Application.LoadLevel(nextLevel);
 		}
 	}
 }
