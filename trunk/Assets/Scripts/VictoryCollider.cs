@@ -6,13 +6,14 @@ public class VictoryCollider : MonoBehaviour {
 
 	public GameObject winObj;
 	public Text gnomeText;
+    private UIController uiController;
 	private float timeToNextLevel = 3f;
 	private int totalGnomes = 0;
 	private bool winTriggered = false;
 
 	// Use this for initialization
 	void Start () {
-	
+        uiController = GameObject.FindWithTag("UI").GetComponent<UIController>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +21,8 @@ public class VictoryCollider : MonoBehaviour {
 		if (other.tag == "Player" && !winTriggered)
 		{
 			winObj.SetActive(true);
+            uiController.progressTime = false;
+            uiController.timeText.gameObject.SetActive(true);
 			gnomeText.gameObject.SetActive(true);
 			gnomeText.text = "" + totalGnomes;
 			Invoke ("NextLevel", timeToNextLevel);

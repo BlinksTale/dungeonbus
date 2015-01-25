@@ -125,7 +125,7 @@ public class BusController : MonoBehaviour {
 
     IEnumerator DisableUpgrade()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(30f);
         DisableUpgrades();
     }
 
