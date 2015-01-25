@@ -10,31 +10,66 @@ public class BusController : MonoBehaviour {
     public GameObject frontGnomeCage;
     public GameObject backGnomeCage;
     public Texture[] gnomeColors;
+    public ParticleSystem[] sparks;
     public int gnomeCount = 15;
 	public bool zeroGravity = false;
 	private int selectedUpgrade;
     private int activeUpgrade;
 	private GameObject front;
 
+    [SerializeField]
+    private Rigidbody rb;
+
 	// Use this for initialization
 	void Start ()
     {
         DisableUpgrades();
+
 		if (generatingGnomes) {
         	GenerateGnomes();
 		}
+		
+		ToggleSparks(zeroGravity); // so sparks are always on in zero g
 		front = this.GetComponentInChildren<GrenadeLauncher>().gameObject;
 	}
 
 	void FixedUpdate()
 	{
-		if (Input.GetKey(KeyCode.LeftArrow)) {
-			front.rigidbody.AddRelativeTorque(new Vector3(-1000f, 0f, 0f));
+		if (zeroGravity) 
+		{
+			if (Input.GetKey(KeyCode.LeftArrow)) {
+				front.rigidbody.AddRelativeTorque(new Vector3(-1000f, 0f, 0f));
+			}
+			if (Input.GetKey(KeyCode.RightArrow)) {
+				front.rigidbody.AddRelativeTorque(new Vector3(1000f, 0f, 0f));
+			}
+		} else {
+			if (rb.velocity.magnitude > 20f)
+			{
+				ToggleSparks(true);
+			}
+			else
+			{
+				ToggleSparks(false);
+			}
 		}
-		if (Input.GetKey(KeyCode.RightArrow)) {
-			front.rigidbody.AddRelativeTorque(new Vector3(1000f, 0f, 0f));
-		}
+
 	}
+
+    void ToggleSparks(bool state)
+    {
+        for (int i = 0; i < sparks.Length; i++)
+        {
+            if (state)
+            {
+                sparks[i].Emit(1);
+            }
+            else
+            {
+                sparks[i].Emit(0);
+            }
+        }
+    }
 
     void GenerateGnomes()
     {
