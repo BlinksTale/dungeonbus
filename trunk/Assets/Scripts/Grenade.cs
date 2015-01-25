@@ -21,8 +21,10 @@ public class Grenade : MonoBehaviour {
 		{
 			explosionTime -= Time.deltaTime;
 			
-			if (explosionTime <= 0f && Explosion != null) {
-				Explosion(force, this.transform.position, radius);
+			if (explosionTime <= 0f) {
+				if (Explosion != null) {
+					Explosion(force, this.transform.position, radius);
+				}
 				GameObject explosion = Instantiate(Resources.Load ("Explosion")) as GameObject;
 				explosion.transform.position = this.transform.position;
 				explosion.transform.eulerAngles = this.transform.eulerAngles;
