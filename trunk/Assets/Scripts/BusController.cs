@@ -28,7 +28,14 @@ public class BusController : MonoBehaviour {
     {
         for (int i = 0; i < sparks.Length; i++)
         {
-            //sparks[i].SetActive(state);
+            if (state)
+            {
+                sparks[i].Emit(1);
+            }
+            else
+            {
+                sparks[i].Emit(0);
+            }
         }
     }
 
