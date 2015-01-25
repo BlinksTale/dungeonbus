@@ -45,6 +45,20 @@ public class BusController : MonoBehaviour {
 				front.rigidbody.AddRelativeTorque(new Vector3(1000f, 0f, 0f));
 			}
 		} else {
+			float maxVolume = 1f;
+			float minVolume = .0f;
+			float transferSpeed = .1f;
+
+			if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow)) {
+			if (audio.volume < maxVolume) {
+				audio.volume = audio.volume * (1f - transferSpeed) + transferSpeed * maxVolume;
+			}
+			} else {
+			if (audio.volume > minVolume) {
+				audio.volume = audio.volume * (1f - transferSpeed) + transferSpeed * minVolume;
+			}
+			}
+
 			if (rb.velocity.magnitude > 20f)
 			{
 				ToggleSparks(true);
@@ -62,7 +76,7 @@ public class BusController : MonoBehaviour {
         for (int i = 0; i < sparks.Length; i++)
         {
             if (state)
-            {
+			{
                 sparks[i].Emit(1);
             }
             else

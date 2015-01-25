@@ -22,14 +22,20 @@ public class Grenade : MonoBehaviour {
 			explosionTime -= Time.deltaTime;
 			
 			if (explosionTime <= 0f) {
-				if (Explosion != null) {
-					Explosion(force, this.transform.position, radius);
-				}
-				GameObject explosion = Instantiate(Resources.Load ("Explosion")) as GameObject;
-				explosion.transform.position = this.transform.position;
-				explosion.transform.eulerAngles = this.transform.eulerAngles;
-				Destroy(this.gameObject);
+				Explode();
 			}
 		}
 	}
+
+	void Explode() {
+		if (Explosion != null) {
+			Explosion(force, this.transform.position, radius);
+		}
+		GameObject explosion = Instantiate(Resources.Load ("Explosion")) as GameObject;
+		explosion.transform.position = this.transform.position;
+		explosion.transform.eulerAngles = this.transform.eulerAngles;
+
+		Destroy(this.gameObject);
+	}
 }
+	

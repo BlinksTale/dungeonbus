@@ -19,11 +19,7 @@ public class VictoryCollider : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (other.tag == "Player" && !winTriggered)
 		{
-			winObj.SetActive(true);
-			gnomeText.gameObject.SetActive(true);
-			gnomeText.text = "" + totalGnomes;
-			Invoke ("NextLevel", timeToNextLevel);
-			winTriggered = true;
+			WinLevel();
 		}
 
 		if (other.tag == "Gnome")
@@ -32,6 +28,15 @@ public class VictoryCollider : MonoBehaviour {
 			gnomeText.text = "" + totalGnomes;
 			other.collider.enabled = false;
 		}
+	}
+
+	void WinLevel() {
+		winObj.SetActive(true);
+		gnomeText.gameObject.SetActive(true);
+		gnomeText.text = "" + totalGnomes;
+		Invoke ("NextLevel", timeToNextLevel);
+		winTriggered = true;
+		audio.Play();
 	}
 
 	void NextLevel() {
