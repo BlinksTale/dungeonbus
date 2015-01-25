@@ -5,13 +5,50 @@ using System;
 public class BusController : MonoBehaviour {
 
     public GameObject[] upgrades;
+    public GameObject gnome;
+    public GameObject frontGnomeCage;
+    public GameObject backGnomeCage;
+    public Texture[] gnomeColors;
+    public int gnomeCount = 15;
     private int selectedUpgrade;
     private int activeUpgrade;
+
 	// Use this for initialization
 	void Start ()
     {
         DisableUpgrades();
+        GenerateGnomes();
 	}
+
+    void GenerateGnomes()
+    {
+        for (int i = 0; i < gnomeCount; i++)
+        {
+            GameObject go = (GameObject)GameObject.Instantiate(gnome,this.transform.position,Quaternion.identity);
+
+            System.Random rand = new System.Random(Guid.NewGuid().GetHashCode());
+            Renderer gnomeRenderer;
+            gnomeRenderer = go.GetComponentInChildren<Renderer>();
+            gnomeRenderer.renderer.material.mainTexture = gnomeColors[rand.Next(0, gnomeColors.Length)];
+
+            if (i < 7)
+            {
+                go.transform.parent = frontGnomeCage.transform;
+                go.transform.localPosition = new Vector3(0 + i * 2, 0, 0);
+            }
+            else
+            {
+                go.transform.parent = backGnomeCage.transform;
+                go.transform.localPosition = new Vector3(0 + (i - 7) * 2, 0, 0);
+            }
+
+            
+
+           go.rigidbody.isKinematic = false;
+
+        }
+
+    }
 
     public void EnableUpgrade()
     {
