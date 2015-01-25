@@ -9,7 +9,7 @@ public class WheelController : MonoBehaviour {
 
 	private float speed = 200f;
 	private WheelCollider wheel;
-	private float turningSpeed = 5f; // speed of 2f has some good chunkiness
+	private float turningSpeed = 2f; // speed of 2f has some good chunkiness
 	private float steerAngleMax = 45f;
 
 	private bool turnRight, turnLeft;
@@ -22,11 +22,22 @@ public class WheelController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (driving) {
-			if (Input.GetKey(KeyCode.Space)) {
-				wheel.motorTorque = 0f*speed;
-			} else {
+			//if (Input.GetKey(KeyCode.Space)) {
+			//	wheel.motorTorque = 0f*speed;
+			//} else {
+            if(Input.GetKey (KeyCode.UpArrow))
+            {
 				wheel.motorTorque = 1f*speed;
-			}
+            }
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                wheel.motorTorque = -1f * speed;
+            }
+            else
+            {
+              wheel.motorTorque = 0f*speed;  
+            }
+			//}
 		}
 
 		if (steering) {
