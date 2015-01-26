@@ -31,6 +31,12 @@ public class goblinAI : MonoBehaviour {
 
         ToggleRagDoll(false);
 
+		audio.Stop();
+		audio.PlayDelayed(Random.Range (0f,3f));
+
+		// Still can't seem to randomize animation play position, this doesn't work either
+//		anim.playbackTime = Random.Range (0f,3f);
+
 	}
 
     void ToggleRagDoll(bool state)
