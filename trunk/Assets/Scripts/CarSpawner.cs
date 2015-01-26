@@ -8,6 +8,7 @@ public class CarSpawner : MonoBehaviour
     public int frameSkip = 5;
     public float CarSpeed = 5;
     public Texture[] carColors;
+    public bool random;
 
     private CarEnemy carSpawn;
 
@@ -29,7 +30,15 @@ public class CarSpawner : MonoBehaviour
     void Spawn()
     {
         GameObject go;
-        go = (GameObject)GameObject.Instantiate(car, this.transform.position, this.transform.rotation);
+
+        if (random)
+        {
+            go = (GameObject)GameObject.Instantiate(car, new Vector3(this.transform.position.x + UnityEngine.Random.Range(-100f, 100f), this.transform.position.y + UnityEngine.Random.Range(-100f, 100f), this.transform.position.z), this.transform.rotation);
+        }
+        else
+        {
+            go = (GameObject)GameObject.Instantiate(car, this.transform.position, this.transform.rotation);
+        }
 
         System.Random rand = new System.Random(Guid.NewGuid().GetHashCode());
         Renderer carRenderer;
@@ -37,6 +46,8 @@ public class CarSpawner : MonoBehaviour
         carRenderer.renderer.material.mainTexture = carColors[rand.Next(0, carColors.Length)];
 
         carSpawn = go.GetComponent<CarEnemy>();
+
+        if (carSpawn)
         carSpawn.speed = CarSpeed;
     }
 }
