@@ -5,7 +5,8 @@ public class LoseCollider : MonoBehaviour {
 
 	public GameObject text;
 	private float timeToNextLevel = 3f;
-	
+	bool lossTriggered = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -13,12 +14,21 @@ public class LoseCollider : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerEnter (Collider other) {
-		if (other.tag == "Player")
+		if (!lossTriggered && other.tag == "Player")
 		{
 			text.SetActive(true);
 			audio.Play();
 			Invoke ("Reset", timeToNextLevel);
-			collider.enabled = false;
+			lossTriggered = true;
+		}
+		
+		if (other.tag == "Gnome")
+		{
+			AudioSource otherAudio = other.transform.parent.audio;
+			if (!otherAudio.isPlaying) {
+				otherAudio.Play();
+			}
+			other.collider.enabled = false;
 		}
 	}
 	

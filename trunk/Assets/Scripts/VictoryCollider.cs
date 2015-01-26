@@ -31,6 +31,11 @@ public class VictoryCollider : MonoBehaviour {
 
 		if (other.tag == "Gnome")
 		{
+			Debug.Log ("Other audio clip name is " + other.audio.clip.name);
+//			AudioSource otherAudio = other.GetComponentInParent<AudioSource>();
+			if (!other.audio.isPlaying) {
+				other.audio.Play();
+			}
 			totalGnomes++;
 			gnomeText.text = "" + totalGnomes;
 			other.collider.enabled = false;

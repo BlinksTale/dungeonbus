@@ -15,7 +15,10 @@ public class Follow : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        altCam = GameObject.FindWithTag("altCam").GetComponent<Camera>();
+		GameObject possibleAltCam = GameObject.FindWithTag("altCam");
+		if (possibleAltCam != null) {
+        	altCam = possibleAltCam.GetComponent<Camera>();
+		}
         mainCam = Camera.main;
 	}
 
