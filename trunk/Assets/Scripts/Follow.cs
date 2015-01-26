@@ -8,11 +8,22 @@ public class Follow : MonoBehaviour {
 	public bool exactly;
     public Vector3 rotationOffset;
     public Vector3 posOffset;
+    public Camera altCam;
+    public Camera mainCam;
+    private bool flip;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+    {
+        altCam = GameObject.FindWithTag("altCam").GetComponent<Camera>();
+        mainCam = Camera.main;
 	}
+
+    void SwitchCam()
+    {
+        altCam.enabled = !altCam.enabled;
+        mainCam.enabled = !mainCam.enabled;
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -45,5 +56,9 @@ public class Follow : MonoBehaviour {
 		}
 
         this.transform.rotation = Quaternion.Euler(rotationOffset);
+
+        if (Input.GetKey(KeyCode.F) && flip==false)
+            SwitchCam();
+   
 	}
 }
