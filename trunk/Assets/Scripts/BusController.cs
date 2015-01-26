@@ -13,6 +13,9 @@ public class BusController : MonoBehaviour {
     public ParticleSystem[] sparks;
     public int gnomeCount = 15;
 	public bool zeroGravity = false;
+	public AudioSource upgradeAudio;
+
+	private RandomizeAudioSource upgradeAudioRandomizer;
 	private int selectedUpgrade;
     private int activeUpgrade;
 	private GameObject front;
@@ -32,6 +35,8 @@ public class BusController : MonoBehaviour {
 		front = this.GetComponentInChildren<GrenadeLauncher>().gameObject;
 
 		ToggleSparks(zeroGravity); // so sparks are always on in zero g
+
+		upgradeAudioRandomizer = upgradeAudio.GetComponent<RandomizeAudioSource>();
 	}
 
 	void FixedUpdate()
@@ -120,7 +125,10 @@ public class BusController : MonoBehaviour {
     {
         StopCoroutine(DisableUpgrade());
 
-        
+		if (upgradeAudioRandomizer != null) {
+			upgradeAudioRandomizer.RandomizeAudio();
+		}
+		upgradeAudio.Play();
 
         while(selectedUpgrade == activeUpgrade)
         {
