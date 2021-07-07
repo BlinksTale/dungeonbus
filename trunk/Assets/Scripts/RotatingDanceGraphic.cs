@@ -7,7 +7,7 @@ public class RotatingDanceGraphic : MonoBehaviour {
 	RectTransform gfx;
 	// 84bpm? 80? 40x per minute is a good start, 40x per minute == 40/60x per second == 2/3
 	float beatLength = 86f/120f;//.5f;
-	float rotationDist = 15f;
+	public float rotationDist = 15f;
 
 	// Use this for initialization
 	void Start () {
